@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+:root {
+  --bsl-blue: #003087;
+  --bsl-gold: #b8860b;
+  --background: #f4f6f9;
+  --foreground: #111827;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f1f1f1; }
+::-webkit-scrollbar-thumb { background: #c1c1c1; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #999; }
+
+/* Priority badges */
+.priority-urgent { background-color: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.priority-high    { background-color: #fff7ed; color: #ea580c; border: 1px solid #fed7aa; }
+.priority-normal  { background-color: #f9fafb; color: #6b7280; border: 1px solid #e5e7eb; }
+
+/* Memo card hover */
+.memo-card { transition: box-shadow 0.15s, border-color 0.15s; }
+.memo-card:hover { box-shadow: 0 2px 8px rgba(0,0,0,0.08); border-color: #003087; }
+
+/* BSL brand */
+.bsl-blue { color: #003087; }
+.bsl-blue-bg { background-color: #003087; }
